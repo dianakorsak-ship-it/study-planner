@@ -1,21 +1,17 @@
-import TaskCard from './components/tasks/TaskCard';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
+import AddTaskPage from './pages/AddTaskPage';
+import CompletedPage from './pages/CompletedPage';
 
 function App() {
-  const task = {
-    id: 1,
-    title: 'Приклад завдання',
-    subject: 'Програмування',
-    date: '2099-01-01',
-    priority: 'medium',
-    done: false,
-  };
-
   return (
-    <div className="content">
-      <h1>Планер навчання</h1>
-      <TaskCard task={task} />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/add" element={<AddTaskPage />} />
+      <Route path="/completed" element={<CompletedPage />} />
+    </Routes>
   );
 }
 

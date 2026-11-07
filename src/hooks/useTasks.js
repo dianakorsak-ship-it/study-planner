@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { loadTasks, saveTasks } from "../lib/storage";
+import { useState } from 'react';
+import { loadTasks, saveTasks } from '../lib/storage';
 
-// Хук для роботи зі списком завдань
 function useTasks() {
   const [tasks, setTasks] = useState(loadTasks);
 
