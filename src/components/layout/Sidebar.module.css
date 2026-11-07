@@ -1,0 +1,37 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #f0f0ea;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #4f7560;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.menu a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu .active {
+  background: #dfe9e1;
+  font-weight: bold;
+}
+
+.user a {
+  color: #4f7560;
+}
