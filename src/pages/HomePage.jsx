@@ -1,27 +1,10 @@
-import { useState, useEffect } from 'react';
 import Layout from '../components/layout/Layout';
 import TaskCard from '../components/tasks/TaskCard';
+import useFetchTasks from '../hooks/useFetchTasks';
 import styles from './Pages.module.css';
 
-const API_URL = 'https://my.api.mockaroo.com/users.json?key=2d6fc660';
-
 function HomePage() {
-  const [tasks, setTasks] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        setTasks(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError('Не вдалося завантажити завдання');
-        setLoading(false);
-      });
-  }, []);
+  const { tasks, loading, error } = useFetchTasks();
 
   const activeCount = tasks.filter((task) => !task.done).length;
   const doneCount = tasks.filter((task) => task.done).length;
