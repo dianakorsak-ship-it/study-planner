@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background: #4f7560;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.stat {
+  background: white;
+  border: 1px solid #e5e5df;
+  border-radius: 10px;
+  padding: 14px 20px;
+  min-width: 160px;
+}
+
+.stat p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.stat h2 {
+  margin: 6px 0 0;
+}
+
+.form {
+  background: white;
+  border: 1px solid #e5e5df;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBox {
+  background: white;
+  border: 1px solid #e5e5df;
+  border-radius: 12px;
+  padding: 32px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loginBox h1 {
+  color: #4f7560;
+  margin: 0;
+}
+
+.loginBox input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}

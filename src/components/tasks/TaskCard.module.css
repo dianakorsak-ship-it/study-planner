@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e5df;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+.subject {
+  margin: 4px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priority {
+  background: #dfe6f3;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
