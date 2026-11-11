@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+import codeCoverageTask from '@cypress/code-coverage/task';
 
 export default defineConfig({
   e2e: {
@@ -10,7 +11,11 @@ export default defineConfig({
       framework: 'react',
       bundler: 'vite',
     },
-    supportFile: false,
+    supportFile: 'cypress/support/component.js',
     indexHtmlFile: 'cypress/support/component-index.html',
+    setupNodeEvents(on, config) {
+      codeCoverageTask(on, config);
+      return config;
+    },
   },
 });
